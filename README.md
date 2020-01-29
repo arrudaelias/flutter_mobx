@@ -5,5 +5,5 @@ App Flutter, consumindo serviço REST, usando MOBX para gerenciamento de estado,
  - Flutter;
  - Mobx (Gerencimaneto de estado);
  - DIO (Consumir serviços REST)
-
+ - json_serializable (Para manipulação de Json)
 

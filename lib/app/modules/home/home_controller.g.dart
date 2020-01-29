@@ -26,6 +26,23 @@ mixin _$HomeController on _HomeBase, Store {
     }, _$valueAtom, name: '${_$valueAtom.name}_set');
   }
 
+  final _$listAtom = Atom(name: '_HomeBase.list');
+
+  @override
+  ObservableList<UserModel> get list {
+    _$listAtom.context.enforceReadPolicy(_$listAtom);
+    _$listAtom.reportObserved();
+    return super.list;
+  }
+
+  @override
+  set list(ObservableList<UserModel> value) {
+    _$listAtom.context.conditionallyRunInAction(() {
+      super.list = value;
+      _$listAtom.reportChanged();
+    }, _$listAtom, name: '${_$listAtom.name}_set');
+  }
+
   final _$_HomeBaseActionController = ActionController(name: '_HomeBase');
 
   @override

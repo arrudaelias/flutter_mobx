@@ -16,7 +16,7 @@ abstract class _HomeBase with Store {
 
   _init() async {
     final allList = await service.getAll();
-    list.addAll(allList.results);
+    list.addAll(allList);
   }
 
 
